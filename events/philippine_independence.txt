@@ -1,0 +1,100 @@
+add_namespace = philippine_independence
+
+#The Philippines Demands Independence
+country_event = {
+	id = philippine_independence.1
+	title = philippine_independence.1.t
+	desc = philippine_independence.1.d
+
+	picture = the_philippines_demands_independence-1026
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = philippine_independence.1.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 90 }
+		release_puppet = PHI
+news_event = {
+    id = philippine_independence.2
+}
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = philippine_independence.1.b
+		trigger = {
+			has_political_power >= 100
+		}
+		ai_chance = { factor = 20 }
+		PHI = {
+    country_event = philippine_independence.4
+}
+add_political_power = -100
+news_event = {
+    id = philippine_independence.3
+}
+
+release_puppet = PHI
+
+
+
+declare_war_on = {
+    target = PHI
+    type = puppet_wargoal_focus
+}
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Philippines Acquires Independence
+news_event = {
+	id = philippine_independence.2
+	title = philippine_independence.2.t
+	desc = philippine_independence.2.d
+
+	picture = philippines_acquires_independence-804
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = philippine_independence.2.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The United States Rejects Filipino Demands
+news_event = {
+	id = philippine_independence.3
+	title = philippine_independence.3.t
+	desc = philippine_independence.3.d
+
+	picture = the_united_states_rejects_filipino_demands-679
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = philippine_independence.3.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}

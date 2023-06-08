@@ -1,0 +1,217 @@
+focus_tree = {
+	id = philippine-focus
+	continuous_focus_position = { x = -40 y = 1050 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PHI
+		}
+	}
+	#Cooperate with the Colonizers
+	focus = {
+		id = PHI_cooperate_with_the_colonizers
+		icon = GFX_focus_chi_mission_to_the_us
+		x = 15
+		y = 0
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = { focus = PHI_stop_the_colonization  }
+		ai_will_do = { factor = 75 }
+		bypass = {
+			NOT = {
+				is_puppet_of = USA
+			
+				country_exists = USA
+			
+			
+			}
+			
+			
+		}
+		completion_reward = {
+			add_stability = 0.1
+			
+			add_war_support = 0.1
+			
+			
+			add_opinion_modifier = {
+			    target = USA
+			    modifier = large_increase
+			}
+			
+			
+			
+			
+		}
+	}
+
+	#Shatter the Enemy of Asian Democracy
+	focus = {
+		id = PHI_shatter_the_enemy_of_asian_democracy
+		icon = GFX_focus_attack_japan
+		x = 17
+		y = 2
+		cost = 12
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = PHI_stop_the_colonization  } prerequisite = { focus = PHI_pacific_atlas_of_democracy  }
+		ai_will_do = { factor = 35 }
+		available = {
+			country_exists = JAP
+			
+			NOT = {    has_government = fascism}
+			
+			
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = JAP
+			}
+			
+			
+			
+		}
+		will_lead_to_war_with = JAP
+	}
+
+	#Stop the Colonization
+	focus = {
+		id = PHI_stop_the_colonization
+		icon = GFX_focus_generic_strike_at_democracy3
+		x = 17
+		y = 0
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_TFV_AUTONOMY
+		}
+		ai_will_do = { factor = 10 }
+		available = {
+			has_stability > 0.6
+			
+			has_war_support > 0.8
+			
+			
+		}
+		bypass = {
+			NOT = {
+				is_puppet_of = USA
+			
+			
+			}
+			
+			
+		}
+		completion_reward = {
+			add_stability = 0.2
+			
+			
+			USA = {
+				country_event = {
+			    id = philippine_independence.1
+			}
+			
+			
+			
+			}
+			
+		}
+	}
+
+	#Pacific Atlas of Democracy
+	focus = {
+		id = PHI_pacific_atlas_of_democracy
+		icon = GFX_PHI_pacific_atlas_of_democracy-427
+		x = 16
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PHI_cooperate_with_the_colonizers  } prerequisite = { focus = PHI_stop_the_colonization  }
+	}
+
+	#American-Filipino Research Collaboration
+	focus = {
+		id = PHI_americanfilipino_research_collaboration
+		icon = GFX_focus_research
+		x = 13
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = PHI_save_the_asians_from_the_asians  }
+		ai_will_do = { factor = 75 }
+		available = {
+			country_exists = USA
+			
+			
+		}
+		completion_reward = {
+			add_research_slot = 1
+			
+			inherit_technology = USA
+			
+			
+		}
+		select_effect = {
+add_tech_bonus = {
+    bonus = 0.8
+}
+
+
+
+
+set_global_flag = usa_grand_research_agreement
+
+
+}
+	}
+
+	#Neutrality of the Philippines
+	focus = {
+		id = PHI_neutrality_of_the_philippines
+		icon = GFX_goal_generic_neutrality_focus
+		x = 15
+		y = 2
+		cost = 11
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PHI_cooperate_with_the_colonizers  }
+		mutually_exclusive = { focus = PHI_save_the_asians_from_the_asians  }
+		ai_will_do = { factor = 75 }
+		completion_reward = {
+			add_stability = 0.4
+			add_war_support = -0.4
+		}
+	}
+
+	#Save the Asians from the Asians
+	focus = {
+		id = PHI_save_the_asians_from_the_asians
+		icon = GFX_focus_AST_war_japan
+		x = 13
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PHI_cooperate_with_the_colonizers  }
+		mutually_exclusive = { focus = PHI_neutrality_of_the_philippines  }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = JAP
+			    modifier = large_decrease
+			}
+			
+			
+			
+		}
+	}
+
+}

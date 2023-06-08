@@ -1,0 +1,9 @@
+spriteTypes = { 
+	##Icon For: Filipino-American Research Collaboration
+	SpriteType = { 
+		name = "GFX_idea_filipinoamerican_research_collaboration-1091"
+		texturefile = "gfx/interface/ideas/american-filipino-research-collaboration-ideas/filipinoamerican_research_collaboration-1091.dds"
+	}
+
+ 
+ }

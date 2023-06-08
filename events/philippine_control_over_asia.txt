@@ -1,0 +1,24 @@
+add_namespace = philippine_control_over_asia
+
+#Philippines Claims Overlordship Over British Colonies in Asia
+news_event = {
+	id = philippine_control_over_asia.1
+	title = philippine_control_over_asia.1.t
+	desc = philippine_control_over_asia.1.d
+
+	picture = philippines_claims_overlordship_over_british_colonies_in_asia-757
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = philippine_control_over_asia.1.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}

@@ -1,0 +1,9 @@
+spriteTypes = { 
+	##Icon For: Philippines Claims Overlordship Over British Colonies in Asia
+	SpriteType = { 
+		name = "philippines_claims_overlordship_over_british_colonies_in_asia-757"
+		texturefile = "gfx/interface/events/philippine_control_over_asia-event/philippines_claims_overlordship_over_british_colonies_in_asia-757.dds"
+	}
+
+ 
+ }

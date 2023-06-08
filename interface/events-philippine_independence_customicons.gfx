@@ -1,0 +1,21 @@
+spriteTypes = { 
+	##Icon For: The Philippines Demands Independence
+	SpriteType = { 
+		name = "the_philippines_demands_independence-1026"
+		texturefile = "gfx/interface/events/philippine_independence-event/the_philippines_demands_independence-1026.dds"
+	}
+
+	##Icon For: Philippines Acquires Independence
+	SpriteType = { 
+		name = "philippines_acquires_independence-804"
+		texturefile = "gfx/interface/events/philippine_independence-event/philippines_acquires_independence-804.dds"
+	}
+
+	##Icon For: The United States Rejects Filipino Demands
+	SpriteType = { 
+		name = "the_united_states_rejects_filipino_demands-679"
+		texturefile = "gfx/interface/events/philippine_independence-event/the_united_states_rejects_filipino_demands-679.dds"
+	}
+
+ 
+ }

@@ -1,0 +1,51 @@
+arsenal_of_asian_democracy = {
+	annex_the_french_colonies = {
+		icon = decision_icon_annex_the_french_colonies
+		cost = 200
+		fire_only_once = yes
+		complete_effect = {
+			FRA = {
+	transfer_state = 671
+        transfer_state = 670
+        transfer_state = 286
+        transfer_state = 741
+
+
+}
+
+add_core_of = VIN
+
+add_core_of = CAM
+
+add_core_of = LAO
+
+
+		}
+		is_good = yes
+		selectable_mission = yes
+	}
+	persuade_the_brits = {
+		icon = decision_icon_persuade_the_brits
+		cost = 250
+		fire_only_once = yes
+		available = {
+			country_exists = ENG
+		}
+		complete_effect = {
+			news_event = { id = philippine_control_over_asia.1 }
+RAJ = {    
+    add_state_core = 288
+    add_state_core = 640
+}
+
+MAL = {
+    add_state_core  = 336
+    add_state_core = 333
+}
+
+
+		}
+		is_good = yes
+		selectable_mission = yes
+	}
+}

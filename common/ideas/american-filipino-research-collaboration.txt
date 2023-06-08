@@ -1,0 +1,17 @@
+ideas = {
+	country = {
+
+		filipinoamerican_research_collaboration = {
+			picture = filipinoamerican_research_collaboration-1091
+			visible = {
+				yes
+			}
+			cancel = {
+				has_global_flag = {
+    flag = usa_grand_research_agreement
+    days > 365
+}
+			}
+		}
+	}
+}
